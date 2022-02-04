@@ -7,8 +7,23 @@
     <title>Document</title>
 </head>
 <body>
-  <h1>ciao
-      
-  </h1>
+  <div class="container">
+    @foreach ($movies as $item)
+    <div class="card">
+        <ul>
+            <h4>{{$item['title']}}</h4>
+            <li>
+                <p>{{$item['original_title']}}</p>
+            </li>
+            <li>
+                <p>{{$item['date']}}</p>
+            </li>
+            <li>
+                <h6>{{$item['vote']}}</h6>
+            </li>
+        </ul>
+    </div>
+    @endforeach
+</div>
 </body>
 </html>
